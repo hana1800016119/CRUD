@@ -13,6 +13,12 @@ $session = session();
                 <li class="nav-item active">
                     <a class="nav-link" href="<?= site_url('home/index') ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
+                <li>
+                    <a class="nav-link" href="<?= site_url('barang/index') ?>">Data User <span class="sr-only">(current)</span></a>
+                </li>
+                <li>
+                    <a class="nav-link" href="<?= site_url('barang/create') ?>">Tambah Data User <span class="sr-only">(current)</span></a>
+                </li>
             </ul>
         <?php endif ?>
         <div class="form-inline my-2 my-lg-0">
