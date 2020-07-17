@@ -79,4 +79,49 @@ class Validation
 			'required' => '{field} Harus Diisi',
 		],
 	];
+	public $barang = [
+		'nama' => [
+			'rules' => 'required|min_length[3]',
+		],
+		'email' => [
+			'rules' => 'required|min_length[3]',
+		],
+		'gambar' => [
+			'rules' => 'uploaded[gambar]',
+		]
+	];
+
+	public $barang_errors = [
+		'nama' => [
+			'required' => '{field} Harus diisi',
+			'min_length' => '{field} Minimum 3 karakter',
+		],
+		'email' => [
+			'required' => '{field} Harus diisi',
+			'min_length' => '{field} Minimum 3 karakter',
+		],
+		'gambar' => [
+			'uploaded' => '{field} Harus di upload',
+		]
+	];
+
+	public $barangupdate = [
+		'nama' => [
+			'rules' => 'required|min_length[3]',
+		],
+		'email' => [
+			'rules' => 'required|min_length[3]',
+		]
+	];
+
+	public $barangupdate_errors = [
+		'nama' => [
+			'required' => '{field} Harus diisi',
+			'min_length' => '{field} Minimum 3 karakter',
+		],
+		'email' => [
+			'required' => '{field} Harus diisi',
+			'min_length' => '{field} Minimum 3 karakter',
+		]
+	];
 }

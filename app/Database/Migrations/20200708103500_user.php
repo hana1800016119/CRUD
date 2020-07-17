@@ -48,10 +48,10 @@ class User extends \CodeIgniter\Database\Migration{
 		]);
 
 		$this->forge->addKey('id', TRUE);
-		$this->forge->createTable('user');
+		$this->forge->createTable('login');
 	}
 
 	public function down(){
-		$this->forge->dropTable('user');
+		$this->forge->dropTable('login');
 	}
 }

@@ -42,8 +42,9 @@ $errors = $session->getFlashdata('errors');
     <?= form_password($password) ?>
 </div>
 <div class="text-right">
-    <?= form_submit('submit', 'Submit', ['class' => 'btn btn-primary']) ?>
+    <?= form_submit('submit', 'Login', ['class' => 'btn btn-primary']) ?>
 </div>
+
 <?= form_close() ?>
 
 <?= $this->endSection() ?>

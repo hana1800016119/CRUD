@@ -1,44 +1,44 @@
-<?php namespace App\Database\Migrations; 
+<?php
 
-class Barang extends \CodeIgniter\Database\Migration{
+namespace App\Database\Migrations;
 
-	public function up(){
+class Barang extends \CodeIgniter\Database\Migration
+{
+
+	public function up()
+	{
 		$this->forge->addField([
-			'id'=>[
-				'type'=>'INT',
-				'constraint'=>11,
-				'unsigned'=>TRUE,
-				'auto_increment'=>TRUE
+			'id' => [
+				'type' => 'INT',
+				'constraint' => 11,
+				'unsigned' => TRUE,
+				'auto_increment' => TRUE
 			],
-			'nama'=>[
-				'type'=>'TEXT',
+			'nama' => [
+				'type' => 'TEXT',
 			],
-			'harga'=>[
-				'type'=>'INT',
-				'constraint'=>11,
+			'email' => [
+				'type' => 'VARCHAR',
+				'constraint' => '255',
 			],
-			'stok'=>[
-				'type'=>'INT',
-				'constraint'=>11,	
+			'gambar' => [
+				'type' => 'TEXT',
 			],
-			'gambar'=>[
-				'type'=>'TEXT',
-			],
-			'created_by'=>[
+			'created_by' => [
 				'type' => 'INT',
 				'constraint' => 11,
 			],
-			'created_date'=>[
+			'created_date' => [
 				'type' => 'DATETIME',
 			],
-			'updated_by'=>[
+			'updated_by' => [
 				'type' => 'INT',
 				'constraint' => 11,
 				'null' => TRUE,
 			],
-			'updated_date'=>[
-				'type'=>'DATETIME',
-				'null'=>TRUE,
+			'updated_date' => [
+				'type' => 'DATETIME',
+				'null' => TRUE,
 			]
 		]);
 
@@ -46,7 +46,8 @@ class Barang extends \CodeIgniter\Database\Migration{
 		$this->forge->createTable('barang');
 	}
 
-	public function down(){
+	public function down()
+	{
 		$this->forge->dropTable('barang');
 	}
 }
